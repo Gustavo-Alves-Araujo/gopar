@@ -97,13 +97,22 @@ const Navbar = () => {
           <img src="/images/logo-gopar-white.png" alt="Logo GOPAR Negócios Globais" />
         </a>
 
+        {showMenu && <div className="nav-overlay" onClick={() => setShowMenu(false)} />}
+
         <div className={`nav-menu ${showMenu ? 'show-menu' : ''}`} id="nav-menu">
+          <div className="nav-menu-header">
+            <img src="/images/logo-gopar-white.png" alt="GOPAR" className="nav-menu-logo" />
+            <div className="nav-close" onClick={() => setShowMenu(false)}>
+              <i className="uil uil-times" />
+            </div>
+          </div>
+
           <ul className="navbar-list">
             {navItems.map((item) => (
               <li key={item.key}>
                 <a
                   href={item.action === 'page' ? item.target : `#${item.target}`}
-                  className={`navbar-list__link line ${(item.action === 'page' ? pathname === item.target : isHomePage && activeLink === item.target) ? 'active-link' : ''}`}
+                  className={`navbar-list__link ${(item.action === 'page' ? pathname === item.target : isHomePage && activeLink === item.target) ? 'active-link' : ''}`}
                   onClick={(e) => handleNavItemClick(item, e)}
                 >
                   {item.label}
@@ -111,8 +120,29 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <div className="nav-close" id="nav-close" onClick={() => setShowMenu(false)}>
-            <i className="uil uil-times" />
+
+          <div className="nav-menu-footer">
+            <a
+              href="#contato"
+              className="nav-menu-contact-btn"
+              onClick={(e) => {
+                e.preventDefault()
+                setShowMenu(false)
+                if (isHomePage) scrollToSection('contato')
+                else { router.push('/'); setTimeout(() => scrollToSection('contato'), 150) }
+              }}
+            >
+              <i className="uil uil-envelope" />
+              {lang === 'pt' ? 'Entrar em Contato' : 'Get in Touch'}
+            </a>
+            <button
+              className="lang-btn lang-btn--menu"
+              onClick={() => setLang(switchToLang)}
+              aria-label={`Switch to ${switchToLang === 'en' ? 'English' : 'Português'}`}
+            >
+              {switchToLang === 'en' ? <USFlag /> : <BRFlag />}
+              <span>{switchToLang === 'en' ? 'English' : 'Português'}</span>
+            </button>
           </div>
         </div>
 
