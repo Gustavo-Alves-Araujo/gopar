@@ -22,9 +22,6 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     const stored = localStorage.getItem('gopar-lang') as Lang | null
     if (stored === 'pt' || stored === 'en') {
       setLangState(stored)
-    } else {
-      const browserLang = navigator.language.toLowerCase()
-      setLangState(browserLang.startsWith('pt') ? 'pt' : 'en')
     }
   }, [])
 
