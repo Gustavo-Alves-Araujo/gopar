@@ -84,6 +84,8 @@ button { cursor: pointer; }
   .nav-menu-contact-btn:hover { background: #b8911f; }
   .lang-btn--menu { width: 100%; justify-content: center; background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2); color: #fff; font-size: 1.4rem; padding: 1rem 1.4rem; }
   .lang-btn--menu:hover { background: rgba(201,162,39,0.2); border-color: var(--clr-gold); }
+  .scroll-header .navbar-list__link { color: rgba(255,255,255,0.8); }
+  .scroll-header .navbar-list__link.active-link { color: var(--clr-gold); }
   .nav-logo { display: block; }
   .nav-logo-white { display: none; }
 }

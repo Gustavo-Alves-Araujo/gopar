@@ -82,7 +82,7 @@ const Products = () => {
               </div>
               <div className="product-back">
                 <div className="product-back__content">
-                  <span className="product-back__title">{c.subtitle}</span>
+                  <span className="product-back__title">{c.title}</span>
                   <div className="product-back__divider" />
                   <p className="product-back__description">{c.description}</p>
                   <a
