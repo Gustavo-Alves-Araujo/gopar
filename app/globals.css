@@ -54,6 +54,9 @@ button { cursor: pointer; }
 .line:hover::after, .line.active-link::after { width: 100%; }
 .nav-toggle { color: var(--clr-white); cursor: pointer; font-size: 2.8rem; display: none; }
 .nav-close { display: none; }
+.nav-menu-header { display: none; }
+.nav-menu-footer { display: none; }
+.nav-overlay { display: none; }
 
 /* Dropdown */
 .nav-dropdown { position: relative; }
