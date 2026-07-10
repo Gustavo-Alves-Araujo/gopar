@@ -4,10 +4,10 @@ import { motion, useInView } from 'framer-motion'
 import { useLang } from '@/contexts/LanguageContext'
 
 const productImages = [
+  '/images/enxofre.jpg',
+  '/images/fertilizante.jpg',
   '/images/soja.jpg',
   '/images/milho.jpg',
-  '/images/fertilizante.jpg',
-  '/images/algodao.jpg',
   '/images/acucar.jpg',
   '/images/sorgo.jpg',
 ]
