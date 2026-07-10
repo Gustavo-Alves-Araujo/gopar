@@ -82,7 +82,8 @@ const Navbar = () => {
     { key: 'home', label: t.nav.home, action: 'scroll', target: 'home' },
     { key: 'sobre', label: t.nav.about, action: 'page', target: '/sobre' },
     { key: 'servicos', label: t.nav.services, action: 'page', target: '/servicos' },
-    { key: 'contato', label: t.nav.contact, action: 'scroll', target: 'contato' },
+    { key: 'cotacao', label: t.nav.rfq, action: 'page', target: '/cotacao' },
+    { key: 'contato', label: t.nav.contact, action: 'page', target: '/contato' },
   ]
 
   const switchToLang = lang === 'pt' ? 'en' : 'pt'

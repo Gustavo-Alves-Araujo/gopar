@@ -34,13 +34,15 @@ const ChartIcon = () => (
 const serviceIcons = [<GlobeIcon key="g" />, <WarehouseIcon key="w" />, <TruckIcon key="t" />, <ChartIcon key="c" />]
 
 const productImages = [
+  '/images/enxofre.jpg',
   '/images/soja.jpg',
   '/images/milho.jpg',
   '/images/fertilizante.jpg',
-  '/images/algodao.jpg',
   '/images/acucar.jpg',
   '/images/sorgo.jpg',
 ]
+
+const productSlugs = ['enxofre', 'soja', 'milho', 'fertilizantes', 'acucar', 'sorgo']
 
 export default function ServicosPage() {
   const { t, lang } = useLang()
@@ -75,6 +77,13 @@ export default function ServicosPage() {
         </motion.div>
       </section>
 
+      {/* Page hero → Commodities (navy → white) */}
+      <div className="wave-sep wave-sep--nw" aria-hidden="true">
+        <svg viewBox="0 0 1440 64" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path d="M0,44 C360,12 720,64 1080,30 C1260,12 1380,48 1440,36 L1440,64 L0,64 Z" fill="#fff" />
+        </svg>
+      </div>
+
       {/* COMMODITIES */}
       <section className="sp-commodities" ref={commoditiesRef}>
         <div className="container-page">
@@ -99,12 +108,12 @@ export default function ServicosPage() {
                 animate={commoditiesInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
               >
-                <div className="sp-commodity-card__img-wrap">
+                <a href={`/produtos/${productSlugs[i]}`} className="sp-commodity-card__img-wrap">
                   <img src={productImages[i]} alt={c.title} className="sp-commodity-card__img" />
                   <div className="sp-commodity-card__overlay">
                     <span className="sp-commodity-card__english">{c.english}</span>
                   </div>
-                </div>
+                </a>
                 <div className="sp-commodity-card__body">
                   <h3 className="sp-commodity-card__title">{c.title}</h3>
                   <p className="sp-commodity-card__desc">{c.description}</p>
@@ -118,20 +127,27 @@ export default function ServicosPage() {
                       </li>
                     ))}
                   </ul>
-                  <a
-                    href={`https://wa.me/5534999318112?text=${encodeURIComponent(`Olá, tenho interesse em ${c.title} da GOPAR!`)}`}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="sp-commodity-card__btn"
-                  >
-                    {sp.commodities.cta}
-                  </a>
+                  <div className="sp-commodity-card__actions">
+                    <a href="/cotacao" className="sp-commodity-card__btn">
+                      {sp.commodities.cta}
+                    </a>
+                    <a href={`/produtos/${productSlugs[i]}`} className="sp-commodity-card__link">
+                      {lang === 'pt' ? 'Ver detalhes' : 'See details'} →
+                    </a>
+                  </div>
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
+
+      {/* Commodities (white) → Process (navy) */}
+      <div className="wave-sep wave-sep--wn" aria-hidden="true">
+        <svg viewBox="0 0 1440 64" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path d="M0,34 C280,68 560,8 840,42 C1060,66 1280,20 1440,44 L1440,64 L0,64 Z" fill="#1B2B4B" />
+        </svg>
+      </div>
 
       {/* PROCESS */}
       <section className="sp-process" ref={processRef}>
@@ -165,6 +181,13 @@ export default function ServicosPage() {
           </div>
         </div>
       </section>
+
+      {/* Process (navy) → Services (light) */}
+      <div className="wave-sep wave-sep--nl" aria-hidden="true">
+        <svg viewBox="0 0 1440 64" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path d="M0,52 C240,18 480,62 720,36 C960,14 1200,56 1440,26 L1440,64 L0,64 Z" fill="#f8f8f4" />
+        </svg>
+      </div>
 
       {/* SERVICES */}
       <section className="sp-services" ref={servicesRef}>
@@ -213,11 +236,11 @@ export default function ServicosPage() {
             <h2 className="page-cta__title">{sp.cta.title}</h2>
             <p className="page-cta__desc">{sp.cta.description}</p>
             <div className="page-cta__btns">
-              <a href="https://wa.me/5534999318112?text=Olá, quero negociar com a GOPAR!" target="_blank" rel="noreferrer" className="page-cta__btn page-cta__btn--primary">
-                {sp.cta.btn}
-              </a>
-              <a href="/#commodities" className="page-cta__btn page-cta__btn--secondary">
+              <a href="/cotacao" className="page-cta__btn page-cta__btn--primary">
                 {sp.cta.btn2}
+              </a>
+              <a href="/contato" className="page-cta__btn page-cta__btn--secondary">
+                {sp.cta.btn}
               </a>
             </div>
           </motion.div>

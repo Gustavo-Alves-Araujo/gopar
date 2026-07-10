@@ -50,7 +50,7 @@ const Contact = () => {
     if (!isValid) { setIsSubmitting(false); return }
 
     try {
-      const response = await fetch('/api/send-email', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -68,10 +68,10 @@ const Contact = () => {
   }
 
   const infoItems = [
-    { icon: 'uil-envelope', text: 'gomesdsantos35@gmail.com', href: 'mailto:gomesdsantos35@gmail.com' },
-    { icon: 'uil-phone', text: '+55 (34) 99931-8112', href: 'tel:+5534999318112' },
+    { icon: 'uil-envelope', text: 'gomes@goparglobal.com.br', href: 'mailto:gomes@goparglobal.com.br' },
+    { icon: 'uil-phone', text: '+55 (34) 9 9123-4567', href: 'tel:+5534991234567' },
     { icon: 'uil-map-marker', text: 'Uberlândia — MG, Brasil', href: null },
-    { icon: 'uil-user', text: 'Verinaldo Gomes — Comercial', href: null },
+    { icon: 'uil-globe', text: 'www.goparglobal.com.br', href: 'https://www.goparglobal.com.br' },
   ]
 
   return (

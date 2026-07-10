@@ -3,8 +3,8 @@ import './globals.css'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 
 export const metadata: Metadata = {
-  title: 'GOPAR Negócios Globais',
-  description: 'Commercial Partnerships & Commodity Solutions — Intermediação de commodities agrícolas e insumos.',
+  title: 'GOPAR Global Business — Connecting Markets. Creating Opportunities.',
+  description: 'Business Development, Commercial Representation and Strategic Partnerships in global markets. Connecting reliable suppliers and qualified buyers in Brazil, China, Middle East, Europe and Africa.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

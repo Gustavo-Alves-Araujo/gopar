@@ -54,7 +54,7 @@ const Diferentials = () => {
                 <span className="title-beige">{t.differentials.titleHighlight}</span>
               </motion.h1>
               <motion.div className="diferencials-items" variants={containerVariants}>
-                {t.differentials.items.map((item, index) => (
+                {t.differentials.items.slice(0, 5).map((item, index) => (
                   <motion.div key={index} className="diferencials-item" variants={itemVariants}>
                     <motion.svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -86,9 +86,7 @@ const Diferentials = () => {
                 transition={{ delay: 1.1, duration: 0.6 }}
               >
                 <a
-                  href="https://wa.me/5534999318112?text=Ol%C3%A1%2C+quero+solicitar+uma+cota%C3%A7%C3%A3o+GOPAR!"
-                  target="_blank"
-                  rel="noreferrer"
+                  href="/cotacao"
                   className="section-cta__btn section-cta__btn--gold"
                 >
                   {t.ctas.differentials}

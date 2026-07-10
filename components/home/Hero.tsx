@@ -13,7 +13,7 @@ const Hero = () => {
       <motion.img
         className="hero_img"
         src="/images/hero.jpg"
-        alt="GOPAR - Commodities Agrícolas"
+        alt="Porto de Santos — GOPAR Global Business"
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : {}}
         transition={{ duration: 1.2 }}
@@ -85,9 +85,7 @@ const Hero = () => {
         >
           <motion.a
             className="button-hero button-hero--primary"
-            href="https://wa.me/5534999318112?text=Ol%C3%A1%2C+vim+pelo+site+da+GOPAR!"
-            target="_blank"
-            rel="noreferrer"
+            href="/cotacao"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -95,7 +93,7 @@ const Hero = () => {
           </motion.a>
           <motion.a
             className="button-hero button-hero--secondary"
-            href="#commodities"
+            href="/sobre"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -103,6 +101,15 @@ const Hero = () => {
           </motion.a>
         </motion.div>
       </motion.div>
+
+      {/* Scroll indicator */}
+      <div className="hero-scroll" aria-hidden="true">
+        <div className="hero-scroll__mouse">
+          <div className="hero-scroll__wheel" />
+        </div>
+        <span className="hero-scroll__text">scroll</span>
+      </div>
+
     </section>
   )
 }

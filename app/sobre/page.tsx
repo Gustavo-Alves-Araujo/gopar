@@ -68,6 +68,13 @@ export default function SobrePage() {
         </motion.div>
       </section>
 
+      {/* Page hero → Story (navy → white) */}
+      <div className="wave-sep wave-sep--nw" aria-hidden="true">
+        <svg viewBox="0 0 1440 64" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path d="M0,42 C360,14 720,62 1080,28 C1260,12 1380,46 1440,34 L1440,64 L0,64 Z" fill="#fff" />
+        </svg>
+      </div>
+
       {/* STORY SECTION */}
       <section className="about-story" ref={storyRef}>
         <div className="container-page">
@@ -106,6 +113,13 @@ export default function SobrePage() {
         </div>
       </section>
 
+      {/* Story (white) → Numbers (navy) */}
+      <div className="wave-sep wave-sep--wn" aria-hidden="true">
+        <svg viewBox="0 0 1440 64" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path d="M0,36 C280,66 560,10 840,42 C1060,66 1280,22 1440,44 L1440,64 L0,64 Z" fill="#1B2B4B" />
+        </svg>
+      </div>
+
       {/* NUMBERS */}
       <section className="about-numbers" ref={numbersRef}>
         <div className="container-page">
@@ -136,6 +150,13 @@ export default function SobrePage() {
           </div>
         </div>
       </section>
+
+      {/* Numbers (navy) → MVV (light) */}
+      <div className="wave-sep wave-sep--nl" aria-hidden="true">
+        <svg viewBox="0 0 1440 64" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path d="M0,52 C240,18 480,64 720,38 C960,14 1200,58 1440,28 L1440,64 L0,64 Z" fill="#f8f8f4" />
+        </svg>
+      </div>
 
       {/* MISSION VISION VALUES */}
       <section className="about-mvv" ref={teamRef}>
@@ -177,6 +198,13 @@ export default function SobrePage() {
           </div>
         </div>
       </section>
+
+      {/* MVV (light) → Team (white) — subtle, same colour family */}
+      <div className="wave-sep wave-sep--wl" aria-hidden="true">
+        <svg viewBox="0 0 1440 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path d="M0,20 C360,40 1080,0 1440,20 L1440,40 L0,40 Z" fill="#fff" />
+        </svg>
+      </div>
 
       {/* TEAM */}
       <section className="about-team" ref={valuesRef}>
@@ -229,6 +257,13 @@ export default function SobrePage() {
         </div>
       </section>
 
+      {/* Team (white) → Values (navy) */}
+      <div className="wave-sep wave-sep--wn" aria-hidden="true">
+        <svg viewBox="0 0 1440 64" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path d="M0,28 C480,66 960,10 1440,50 L1440,64 L0,64 Z" fill="#1B2B4B" />
+        </svg>
+      </div>
+
       {/* VALUES */}
       <section className="about-values-section">
         <div className="container-page">
@@ -264,6 +299,13 @@ export default function SobrePage() {
         </div>
       </section>
 
+      {/* Values (navy) → CTA (light) */}
+      <div className="wave-sep wave-sep--nl" aria-hidden="true">
+        <svg viewBox="0 0 1440 64" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path d="M0,46 C400,14 800,62 1200,26 C1320,12 1400,44 1440,36 L1440,64 L0,64 Z" fill="#f8f8f4" />
+        </svg>
+      </div>
+
       {/* CTA */}
       <section className="page-cta">
         <div className="container-page">
@@ -283,11 +325,11 @@ export default function SobrePage() {
                 : 'Contact the GOPAR team and discover how we can connect your business to the global commodities market.'}
             </p>
             <div className="page-cta__btns">
-              <a href="https://wa.me/5534999318112?text=Olá, vim pelo site da GOPAR!" target="_blank" rel="noreferrer" className="page-cta__btn page-cta__btn--primary">
-                {lang === 'pt' ? 'Fale Conosco' : 'Contact Us'}
+              <a href="/cotacao" className="page-cta__btn page-cta__btn--primary">
+                {lang === 'pt' ? 'Solicitar Cotação' : 'Request a Quote'}
               </a>
-              <a href="/servicos" className="page-cta__btn page-cta__btn--secondary">
-                {lang === 'pt' ? 'Ver Commodities' : 'View Commodities'}
+              <a href="/contato" className="page-cta__btn page-cta__btn--secondary">
+                {lang === 'pt' ? 'Fale Conosco' : 'Contact Us'}
               </a>
             </div>
           </motion.div>

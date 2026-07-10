@@ -3,6 +3,7 @@ import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { useRouter } from 'next/navigation'
 import { useLang } from '@/contexts/LanguageContext'
+import Globe from '@/components/Globe'
 
 const About = () => {
   const { t } = useLang()
@@ -18,14 +19,14 @@ const About = () => {
         animate={isInView ? { opacity: 1 } : {}}
         transition={{ duration: 0.5 }}
       >
-        <motion.img
-          src="/images/about.jpg"
-          alt="GOPAR - Agronegócio Global"
-          className="about-image"
+        <motion.div
+          className="about-globe-motion"
           initial={{ opacity: 0, x: -50 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.3 }}
-        />
+        >
+          <Globe />
+        </motion.div>
 
         <motion.div
           className="about-text"

@@ -86,9 +86,7 @@ const Products = () => {
                   <div className="product-back__divider" />
                   <p className="product-back__description">{c.description}</p>
                   <a
-                    href="https://wa.me/5534999318112?text=Ol%C3%A1%2C+tenho+interesse+em+commodities+da+GOPAR!"
-                    target="_blank"
-                    rel="noreferrer"
+                    href="/cotacao"
                     className="product-back__btn"
                   >
                     {t.products.cta}
@@ -101,8 +99,7 @@ const Products = () => {
       </motion.div>
 
       <motion.a
-        href="https://wa.me/5534999318112?text=Ol%C3%A1%2C+tenho+interesse+em+commodities+da+GOPAR!"
-        target="_blank"
+        href="/cotacao"
         className="product-button"
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
