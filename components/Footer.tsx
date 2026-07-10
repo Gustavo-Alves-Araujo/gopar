@@ -24,7 +24,7 @@ const Footer = () => {
     }
   }
 
-  const commodities = ['Soja', 'Milho', 'Fertilizantes', 'Algodão', 'Açúcar IC45', 'Sorgo']
+  const commodities = ['Enxofre', 'Soja', 'Milho', 'Fertilizantes', 'Açúcar IC45', 'Sorgo']
 
   return (
     <footer className="footer">
@@ -48,7 +48,7 @@ const Footer = () => {
             <svg xmlns="http://www.w3.org/2000/svg" height="2.4rem" viewBox="0 -960 960 960" width="2.4rem" fill="#1B2B4B">
               <path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280 320-200v-80L480-520 160-720v80l320 200Z" />
             </svg>
-            <p>gomesdsantos35@gmail.com</p>
+            <p>gomes@goparglobal.com.br</p>
           </div>
           <div className="footer-contats">
             <svg xmlns="http://www.w3.org/2000/svg" height="2.4rem" viewBox="0 -960 960 960" width="2.4rem" fill="#1B2B4B">
@@ -99,6 +99,7 @@ const Footer = () => {
                 </a>
               </li>
             ))}
+            <li style={{ color: '#888', fontSize: '1.3rem' }}>Entre outros</li>
           </ul>
         </div>
 
@@ -106,14 +107,14 @@ const Footer = () => {
           <h2><span className="footer-titles">{t.footer.contactTitle}</span></h2>
           <ul className="footer-list">
             <li style={{ color: '#555', fontSize: '1.4rem' }}>Verinaldo Gomes</li>
-            <li style={{ color: '#777', fontSize: '1.3rem' }}>Comercial</li>
+            <li style={{ color: '#777', fontSize: '1.3rem' }}>Diretor & CEO</li>
             <li style={{ marginTop: '0.8rem' }}>
               <a href="https://wa.me/5534999318112" className="footer-list__link" style={{ color: '#25D366' }}>
                 WhatsApp
               </a>
             </li>
             <li>
-              <a href="mailto:gomesdsantos35@gmail.com" className="footer-list__link line-footer">
+              <a href="mailto:gomes@goparglobal.com.br" className="footer-list__link line-footer">
                 E-MAIL
               </a>
             </li>
@@ -130,7 +131,7 @@ const Footer = () => {
           <a href="https://wa.me/5534999318112" target="_blank" rel="noreferrer">
             <i className="uil uil-whatsapp" />
           </a>
-          <a href="mailto:gomesdsantos35@gmail.com" target="_blank" rel="noreferrer">
+          <a href="mailto:gomes@goparglobal.com.br" target="_blank" rel="noreferrer">
             <i className="uil uil-envelope" />
           </a>
           <a href="https://www.linkedin.com/company/gopar" target="_blank" rel="noreferrer">

@@ -93,14 +93,14 @@ const Contracts = () => {
             transition={{ delay: 0.8 }}
           >
             <a
-              href="https://wa.me/551136780066?text=Olá, vim pelo site interessado em ser Comprador!"
+              href="https://wa.me/5534999318112?text=Olá, vim pelo site interessado em ser Comprador!"
               target="_blank"
               className="contracts-btn-green"
             >
               SER COMPRADOR
             </a>
             <a
-              href="https://wa.me/551136780066?text=Olá, vim pelo site interessado em ser Fornecedor!"
+              href="https://wa.me/5534999318112?text=Olá, vim pelo site interessado em ser Fornecedor!"
               target="_blank"
               className="contracts-btn-beige"
             >

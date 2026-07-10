@@ -125,7 +125,7 @@ const RFQPage = () => {
             <div className="rfq-info__contact">
               <p className="rfq-info__contact-label">Dúvidas? Fale direto:</p>
               <a
-                href="https://wa.me/5534991234567?text=Ol%C3%A1%2C+gostaria+de+solicitar+uma+cota%C3%A7%C3%A3o+GOPAR!"
+                href="https://wa.me/5534999318112?text=Ol%C3%A1%2C+gostaria+de+solicitar+uma+cota%C3%A7%C3%A3o+GOPAR!"
                 target="_blank"
                 rel="noreferrer"
                 className="rfq-info__wa"

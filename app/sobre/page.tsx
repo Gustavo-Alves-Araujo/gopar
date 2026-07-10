@@ -227,9 +227,7 @@ export default function SobrePage() {
             transition={{ duration: 0.7, delay: 0.2 }}
           >
             <div className="team-card__avatar">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="48" height="48">
-                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" />
-              </svg>
+              <img src="/images/ceo-verinaldo.jpg" alt={a.team.name} className="team-card__avatar-img" />
             </div>
             <div className="team-card__info">
               <h3 className="team-card__name">{a.team.name}</h3>
@@ -243,7 +241,7 @@ export default function SobrePage() {
                   </svg>
                   WhatsApp
                 </a>
-                <a href="mailto:gomesdsantos35@gmail.com" className="team-card__link" target="_blank" rel="noreferrer">
+                <a href="mailto:gomes@goparglobal.com.br" className="team-card__link" target="_blank" rel="noreferrer">
                   <i className="uil uil-envelope" style={{ fontSize: '1.8rem' }} />
                   E-mail
                 </a>
