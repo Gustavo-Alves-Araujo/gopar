@@ -31,18 +31,18 @@ const productData: Record<string, ProductEntry> = {
     pt: {
       name: 'Enxofre', nameEn: 'Sulphur', image: '/images/enxofre.jpg',
       heroLabel: 'Nosso Produto', description: 'Comercializamos enxofre granulado e pastilhado para uso agrícola e industrial. Conectamos fornecedores internacionais qualificados a compradores no Brasil e em outros mercados estratégicos.',
-      specs: [{ label: 'Tipo', value: 'Granulado / Pastilhado' }, { label: 'Pureza', value: '90-99.5% S' }, { label: 'Umidade', value: 'Máx. 0.5%' }, { label: 'Granulometria', value: '2-5mm (granulado)' }],
+      specs: [{ label: 'Tipo', value: 'Granulado' }, { label: 'Pureza mínima', value: '99.95% S' }, { label: 'Cinzas (máx.)', value: '≤ 0.05%' }, { label: 'Umidade (máx.)', value: '≤ 0.5%' }, { label: 'Cor', value: 'Amarelo vivo' }, { label: 'Acidez H₂SO₄ (máx.)', value: '≤ 0.02%' }, { label: 'Carbono (máx.)', value: '≤ 0.03%' }, { label: 'Arsênio, selênio, telúrio e chumbo', value: 'Ausente' }, { label: 'Impurezas mecânicas (papel, madeira, areia)', value: 'Não permitido' }],
       applications: ['Fertilização de solos agrícolas (acidificação)', 'Matéria-prima para produção de H₂SO₄', 'Fungicida e defensivo agrícola', 'Indústria química e petroquímica'],
       origins: ['Oriente Médio', 'Refinarias Internacionais', 'Mercado Spot Global'],
-      packaging: ['BigBag 1MT', 'Granel a Granel', 'Contêiner FCL/LCL'],
+      packaging: ['Sacos 50kg', 'BigBag 1 tonelada', 'Granel'],
     },
     en: {
       name: 'Sulphur', nameEn: 'Sulphur', image: '/images/enxofre.jpg',
       heroLabel: 'Our Product', description: 'We source and trade granular and pastille sulphur for agricultural and industrial use. We connect qualified international suppliers with buyers in Brazil and other strategic markets.',
-      specs: [{ label: 'Type', value: 'Granular / Pastille' }, { label: 'Purity', value: '90-99.5% S' }, { label: 'Moisture', value: 'Max. 0.5%' }, { label: 'Granulometry', value: '2-5mm (granular)' }],
+      specs: [{ label: 'Type', value: 'Granular' }, { label: 'Minimum purity', value: '99.95% S' }, { label: 'Ash content (max.)', value: '≤ 0.05%' }, { label: 'Moisture (max.)', value: '≤ 0.5%' }, { label: 'Color', value: 'Bright yellow' }, { label: 'Acidity H₂SO₄ (max.)', value: '≤ 0.02%' }, { label: 'Carbon content (max.)', value: '≤ 0.03%' }, { label: 'Arsenic, selenium, tellurium and lead', value: 'None' }, { label: 'Mechanical impurities (paper, wood, sand)', value: 'Not allowed' }],
       applications: ['Agricultural soil fertilization (acidification)', 'Raw material for H₂SO₄ production', 'Fungicide and agricultural defense', 'Chemical and petrochemical industry'],
       origins: ['Middle East', 'International Refineries', 'Global Spot Market'],
-      packaging: ['BigBag 1MT', 'Bulk to Bulk', 'Container FCL/LCL'],
+      packaging: ['50kg bags', 'BigBag 1 ton', 'Bulk'],
     },
   },
   fertilizantes: {
@@ -218,23 +218,6 @@ export default function ProductPage() {
               <div className="product-list">
                 {p.applications.map((app, i) => (
                   <div className="product-list__item" key={i}>{app}</div>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Origins */}
-            <motion.div
-              className="product-info-card"
-              initial={{ opacity: 0, y: 30 }}
-              animate={bodyInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <h2 className="product-info-card__title">
-                {lang === 'pt' ? 'Origens' : 'Origins'}
-              </h2>
-              <div className="product-list">
-                {p.origins.map((origin, i) => (
-                  <div className="product-list__item" key={i}>{origin}</div>
                 ))}
               </div>
             </motion.div>

@@ -245,7 +245,7 @@ export default function SobrePage() {
                   <i className="uil uil-envelope" style={{ fontSize: '1.8rem' }} />
                   E-mail
                 </a>
-                <a href="https://www.linkedin.com/company/gopar" className="team-card__link team-card__link--blue" target="_blank" rel="noreferrer">
+                <a href="https://www.linkedin.com/in/verinaldo-gomes-gomes-83a7044a" className="team-card__link team-card__link--blue" target="_blank" rel="noreferrer">
                   <i className="uil uil-linkedin" style={{ fontSize: '1.8rem' }} />
                   LinkedIn
                 </a>

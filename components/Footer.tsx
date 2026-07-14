@@ -134,7 +134,7 @@ const Footer = () => {
           <a href="mailto:gomes@goparglobal.com.br" target="_blank" rel="noreferrer">
             <i className="uil uil-envelope" />
           </a>
-          <a href="https://www.linkedin.com/company/gopar" target="_blank" rel="noreferrer">
+          <a href="https://www.linkedin.com/in/verinaldo-gomes-gomes-83a7044a" target="_blank" rel="noreferrer">
             <i className="uil uil-linkedin" />
           </a>
         </div>

@@ -135,7 +135,7 @@ const Contact = () => {
             <div className="contact2-social">
               <p className="contact2-social__label">{t.contact.social}</p>
               <div className="contact2-social__icons">
-                <a href="https://www.linkedin.com/company/gopar" target="_blank" rel="noreferrer" className="contact2-social__link">
+                <a href="https://www.linkedin.com/in/verinaldo-gomes-gomes-83a7044a" target="_blank" rel="noreferrer" className="contact2-social__link">
                   <i className="uil uil-linkedin" />
                 </a>
                 <a href="https://wa.me/5534999318112" target="_blank" rel="noreferrer" className="contact2-social__link">
