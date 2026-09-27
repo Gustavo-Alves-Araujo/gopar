@@ -405,6 +405,8 @@ textarea.contact-form__input { height: 12rem; resize: vertical; }
 .Copyright { align-items: center; border-top: 1px solid #e0e0d8; display: flex; flex-wrap: wrap; gap: 1.6rem; justify-content: space-between; padding-top: 2rem; }
 .Copyright h1 { color: #666; font-size: 1.4rem; font-weight: 400; }
 .Copyright .date { color: var(--clr-navy); font-weight: 700; }
+.Copyright .axo-credit { color: inherit; text-decoration: none; }
+.Copyright .axo-credit:hover { text-decoration: underline; }
 .footer-icons { display: flex; gap: 1.6rem; }
 .footer-icons a { color: var(--clr-navy); font-size: 2.4rem; transition: color 0.3s; }
 .footer-icons a:hover { color: var(--clr-gold); }

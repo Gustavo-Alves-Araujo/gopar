@@ -125,7 +125,9 @@ const Footer = () => {
       <div className="Copyright container-page">
         <h1>
           Copyright &copy; <span className="date">{new Date().getFullYear()}</span>{' '}
-          {t.footer.copyright}
+          {t.footer.copyright}{' '}
+          · Desenvolvido por{' '}
+          <a href="https://www.axolutions.com.br" target="_blank" rel="noopener" className="axo-credit">Axolutions</a>
         </h1>
         <div className="footer-icons">
           <a href="https://wa.me/5534999318112" target="_blank" rel="noreferrer">
